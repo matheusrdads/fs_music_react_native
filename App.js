@@ -1,21 +1,19 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
 
-export default function App() {
+import Routes from './src/routes/index'
+// import TelaA from './src/views/TelaA';
+
+export default function App(props) {
+  const dados = [
+    {
+      produto: "Album",
+      categoria: "Heav Metal"
+    }
+  ]
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    // <TelaA/>
+    <Routes valores={dados} />
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
